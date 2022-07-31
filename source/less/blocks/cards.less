@@ -1,0 +1,60 @@
+.cards {
+  padding: 20px;
+  padding-top: 40px;
+  background-color: @background-primary;
+  border-radius: 4px;
+}
+
+.cards__link {
+  display: block;
+  padding: 0 55px;
+}
+
+.cards__image {
+  display: block;
+  min-width: 130px;
+  width: 100%;
+  min-height: 188px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+
+.cards__description {
+  margin-bottom: 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cards__buy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .cards {
+    padding: 50px 30px 30px;
+  }
+
+  .cards__image {
+    width: 13px;
+    margin-bottom: 31px;
+  }
+
+  .cards__link {
+    padding: 0;
+  }
+
+  .cards__description {
+    margin-bottom: 20px;
+  }
+}

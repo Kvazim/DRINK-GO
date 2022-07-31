@@ -1,0 +1,55 @@
+.switch__range {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    border-color: @text-base;
+  }
+}
+
+.switch__range--min,
+.switch__range--max {
+  background-color: @background-primary;
+  border: 2px solid @color-togle;
+}
+
+.switch__range--min {
+  bottom: -10px;
+  left: 0;
+}
+
+.switch__range--max {
+  bottom: -10px;
+  right: 0;
+}
+
+.switch__range:hover::before,
+.switch__range:focus::before {
+  background-color: @input-hover;
+}
+
+.switch__range:active::before {
+  background-color: @color-togle;
+}
+
+.switch--disabled {
+  background-color: @text-base;
+}

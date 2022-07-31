@@ -1,0 +1,25 @@
+.range__scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 34px;
+  background: @color-lyght-grey;
+}
+
+.range__bar {
+  position: absolute;
+  width: 260px;
+  height: 4px;
+  background: @color-togle;
+}
+
+@media (min-width: @tablet-width) {
+  .range__bar {
+    width: 203px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__bar {
+    width: 298px;
+  }
+}

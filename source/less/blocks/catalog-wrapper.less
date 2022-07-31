@@ -1,0 +1,22 @@
+.catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: @desktop-width;
+  margin: 0 auto;
+  padding: 50px 20px 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-wrapper {
+    padding-top: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-wrapper {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+    padding: 100px 40px 120px;
+  }
+}

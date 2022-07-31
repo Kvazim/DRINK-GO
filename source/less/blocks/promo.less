@@ -1,0 +1,81 @@
+.promo--nojs .promo__button {
+  display: none;
+}
+
+.promo__pagination {
+  display: none;
+}
+
+.promo__button {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+
+  &--prew {
+    top: 0;
+    left: -29px;
+  }
+
+  &--next {
+    top: 0;
+    right: -29px;
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, @background-primary 0%, @background-primary 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, @text-secondary-activ 0%, @text-secondary 100%);
+  }
+
+  &:disabled {
+    fill: @text-base;
+  }
+}
+
+.promo__icon {
+  align-self: center;
+  fill: @text-secondary;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo__button--prew {
+    left: 0;
+  }
+
+  .promo__button--next {
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__pagination {
+    display: block;
+    padding-bottom: 55px;
+  }
+
+  .promo__pagination span {
+    width: 62px;
+    height: 4px;
+    border-radius: 0;
+    background-color: @background-primary;
+    opacity: 1;
+  }
+
+  .promo__pagination .swiper-pagination-bullet-active {
+    background-color: @text-secondary;
+  }
+}
