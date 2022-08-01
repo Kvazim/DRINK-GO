@@ -5,4 +5,3 @@
 
 40 часов
 Тестирует Stylelint и EditorConfig.
-тест
