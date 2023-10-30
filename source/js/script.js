@@ -50,9 +50,7 @@ const swiper = new Swiper('.swiper', {
 const map = L.map(mapCanvas)
   .on('load', () => {
     CENTER_MAP;
-  },
-  trackResize: true,
-  )
+  })
   .setView(CENTER_MAP, ZOOM_MAP);
 
 L.tileLayer(
