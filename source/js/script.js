@@ -47,7 +47,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const map = L.map(mapCanvas)
+const map = L.map(mapCanvas, {trackResize: true,})
   .on('load', () => {
     CENTER_MAP;
   })
@@ -72,7 +72,5 @@ const marker = L.marker(
     icon: mainPinIcon,
   },
 );
-
-
 
 marker.addTo(map);
