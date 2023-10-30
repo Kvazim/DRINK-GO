@@ -15,6 +15,7 @@ const CENTER_MAP = {
 const LeafletParameters = {
   TILE_LAYER: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   ATTRIBUTION: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  trackResize: true,
 };
 
 nav.classList.remove('navigation--nojs');
@@ -72,5 +73,7 @@ const marker = L.marker(
     icon: mainPinIcon,
   },
 );
+
+
 
 marker.addTo(map);
