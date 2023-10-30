@@ -15,7 +15,6 @@ const CENTER_MAP = {
 const LeafletParameters = {
   TILE_LAYER: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   ATTRIBUTION: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  trackResize: true,
 };
 
 nav.classList.remove('navigation--nojs');
@@ -51,7 +50,9 @@ const swiper = new Swiper('.swiper', {
 const map = L.map(mapCanvas)
   .on('load', () => {
     CENTER_MAP;
-  })
+  },
+  trackResize: true,
+  )
   .setView(CENTER_MAP, ZOOM_MAP);
 
 L.tileLayer(
